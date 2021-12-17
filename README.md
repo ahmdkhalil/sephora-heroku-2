@@ -1,1 +1,1 @@
-# sephora-heroku-2
+# sephora-heroku
