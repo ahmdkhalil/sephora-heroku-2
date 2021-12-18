@@ -30,6 +30,8 @@ df_cont = df_cont.reset_index(drop=True)
 titles = df_cont[['Product', 'Ing_Tfidf', 'Rating', 'Price']]
 indices = pd.Series(df_cont.index, index=df_cont['Product'])
 
+# Cache for a day
+@st.cache(ttl=3600*24, show_spinner=False)
 
 def content_recommendations(product):
     idx = indices[product]
